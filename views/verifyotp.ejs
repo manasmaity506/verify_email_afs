@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My App</title>
+</head>
+<body>
+    <p>Check Your inbox, we have send otp to <%= userEmail %>  </p> 
+    <form action="/verifyotp" method="post">
+        <input type="hidden" name="userEmail" value="<%= userEmail %>">
+        <input type="password" name="otp" placeholder="Enter Your OTP" required autocomplete="off">
+        <button type="submit">verify</button>
+    </form>
+</body>
+</html>
